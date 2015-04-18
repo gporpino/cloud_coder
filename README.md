@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # CloudCoder
 
 TODO: Write a gem description
