@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'cloud_coder'
+
+puts "start"
+client = CloudCoder::EC2.new
+ip = client.ec2.describe_instances.reservations.first.instances.first.private_ip_address
+puts "ssh #{ip}"
+#value = %x( ssh #{ip} )
+CloudCoder::SafeExec.exec "ssh #{ip}"
+#puts value
